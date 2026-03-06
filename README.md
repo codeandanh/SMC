@@ -230,27 +230,6 @@ Examples using the proposed methods:
 ./ic -g ../data/email.bin -t 101 -a ALG2 >> ../output/threestr_ic.csv
 ```
 
-## Batch Experiments
-
-The `Makefile` defines a batch target:
-
-```bash
-make single-pass
-```
-
-This target enters `exp/single-pass` and runs a sequence of experiments for selected datasets and binaries. According to the current build script, it uses the dataset identifiers:
-
-* `er`
-* `ba`
-* `fb`
-* `slashdot`
-* `pokec`
-
-and the binaries:
-
-* `maxcut`
-* `revmax`
-
 ## Output Format
 
 The main algorithms print experimental results in a comma-separated format. The standard header used by most runs is:
