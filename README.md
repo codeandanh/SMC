@@ -9,6 +9,7 @@ The code is organized around a common experimental pipeline for graph-based MCSC
 
 ## Repository Structure
 
+```text
 .
 ├── data/                    # Input graphs in binary format
 ├── run/                     # Compiled executables
@@ -25,6 +26,7 @@ The code is organized around a common experimental pipeline for graph-based MCSC
 │   └── binheap.cpp          # Auxiliary heap structure
 ├── Makefile
 └── LICENSE
+```
 
 ## Implemented Methods
 
@@ -49,9 +51,7 @@ The repository also includes the following baseline methods:
 The `Makefile` builds different executables for different objective settings.
 
 * `maxcov` — maximum coverage / coverage threshold setting
-* `maxcut` — maximum cut setting
 * `revmax` — revenue threshold, monotone mode
-* `revmax_nm` — revenue threshold, non-monotone mode
 * `ic` — influence threshold setting with OpenMP support
 
 ## Build Instructions
@@ -67,9 +67,7 @@ make
 This command creates the `run/` directory and builds:
 
 * `run/maxcov`
-* `run/maxcut`
 * `run/revmax`
-* `run/revmax_nm`
 * `run/ic`
 * `run/preproc`
 * `run/preproc_ic`
@@ -78,9 +76,7 @@ To build individual targets:
 
 ```bash
 make maxcov
-make maxcut
 make revmax
-make revmax_nm
 make ic
 make preproc
 make preproc_ic
@@ -233,40 +229,6 @@ Examples using the proposed methods:
 ./maxcov -g ../data/google.bin -t 17514 -a ALG1 >> ../output/singstream_cov.csv
 ./ic -g ../data/email.bin -t 101 -a ALG2 >> ../output/threestr_ic.csv
 ```
-
-## Synthetic Graph Generation
-
-The repository also includes two graph generators.
-
-### Erdős–Rényi graphs
-
-Build:
-
-```bash
-make er
-```
-
-This produces:
-
-```bash
-./run/er
-```
-
-### Barabási–Albert graphs
-
-Build:
-
-```bash
-make ba
-```
-
-This produces:
-
-```bash
-./run/ba
-```
-
-These generators are useful for creating synthetic instances for controlled experiments.
 
 ## Batch Experiments
 
