@@ -1,4 +1,4 @@
-````markdown
+
 # Code for “Boosting Streaming Algorithms for Minimum Cost Submodular Cover with Theoretical Guarantees”
 
 This repository contains the code used to evaluate streaming algorithms for the **Minimum Cost Submodular Cover (MCSC)** problem. It includes the implementations of the proposed methods, baseline algorithms, graph preprocessing tools, synthetic graph generators, and executables for several objective settings used in the experiments.
@@ -9,7 +9,6 @@ The code is organized around a common experimental pipeline for graph-based MCSC
 
 ## Repository Structure
 
-```text
 .
 ├── data/                    # Input graphs in binary format
 ├── run/                     # Compiled executables
@@ -26,7 +25,6 @@ The code is organized around a common experimental pipeline for graph-based MCSC
 │   └── binheap.cpp          # Auxiliary heap structure
 ├── Makefile
 └── LICENSE
-````
 
 ## Implemented Methods
 
